@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- Jamie S. - Auth Page -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register / Login — EduNova</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">◈</span>
+      <span class="brand-name">EduNova</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="courses.html" class="nav-link">Courses</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="register.html" class="nav-btn">Get Started</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <div class="auth-section">
+    <div class="auth-container">
+
+      <!-- TABS -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="regTab" onclick="switchTab('register')">Register</button>
+        <button class="auth-tab" id="loginTab" onclick="switchTab('login')">Login</button>
+      </div>
+
+      <!-- REGISTER FORM (frontend validation only for now) -->
+      <div class="auth-form-wrap" id="registerForm">
+        <div class="auth-header">
+          <span class="brand-icon" style="font-size:2rem">◈</span>
+          <h2>Create Your Account</h2>
+          <p>Create a fake account to test my database</p>
+        </div>
+        <form novalidate onsubmit="validateRegister(event)">
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label for="reg-fname">First Name</label>
+              <input type="text" id="reg-fname" placeholder="First name" />
+              <span class="field-error" id="err-fname"></span>
+            </div>
+            <div class="form-group">
+              <label for="reg-lname">Last Name</label>
+              <input type="text" id="reg-lname" placeholder="Last name" />
+              <span class="field-error" id="err-lname"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" placeholder="you@example.com" />
+            <span class="field-error" id="err-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-phone">Phone Number</label>
+            <input type="tel" id="reg-phone" placeholder="+91 XXXXX XXXXX" />
+            <span class="field-error" id="err-phone"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-pass">Password</label>
+            <div class="pass-wrap">
+              <input type="password" id="reg-pass" placeholder="Min. 8 characters" oninput="checkStrength()" />
+              <button type="button" class="toggle-pass" onclick="togglePass('reg-pass', this)">👁</button>
+            </div>
+            <div class="strength-bar">
+              <div class="strength-fill" id="strengthFill"></div>
+            </div>
+            <span class="strength-label" id="strengthLabel"></span>
+            <span class="field-error" id="err-pass"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm">Confirm Password</label>
+            <div class="pass-wrap">
+              <input type="password" id="reg-confirm" placeholder="Re-enter password" />
+              <button type="button" class="toggle-pass" onclick="togglePass('reg-confirm', this)">👁</button>
+            </div>
+            <span class="field-error" id="err-confirm"></span>
+          </div>
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="reg-terms" />
+              <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+            </label>
+            <span class="field-error" id="err-terms"></span>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">Create Account →</button>
+          <p class="switch-auth">Already have an account? <a href="#" onclick="switchTab('login')">Log in here</a></p>
+        </form>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div class="auth-form-wrap" id="loginFormWrap" style="display:none">
+        <div class="auth-header">
+          <span class="brand-icon" style="font-size:2rem">◈</span>
+          <h2>Welcome Back!</h2>
+          <p>Sign in to test the login functionality</p>
+        </div>
+        <form novalidate onsubmit="validateLogin(event)">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" placeholder="you@example.com" />
+            <span class="field-error" id="lerr-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="login-pass">Password</label>
+            <div class="pass-wrap">
+              <input type="password" id="login-pass" placeholder="Your password" />
+              <button type="button" class="toggle-pass" onclick="togglePass('login-pass', this)">👁</button>
+            </div>
+            <span class="field-error" id="lerr-pass"></span>
+          </div>
+          <div class="form-group flex-between">
+            <label class="checkbox-label">
+              <input type="checkbox" id="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">Sign In →</button>
+          <p class="switch-auth">Don't have an account? <a href="#" onclick="switchTab('register')">Register here</a>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SUCCESS TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2025 EduNova. This website is a student academic project.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // nav menu toggle
+    function toggleMenu() { document.querySelector('.nav-links').classList.toggle('open'); }
+
+    function switchTab(tab) {
+      const isReg = tab === 'register';
+      document.getElementById('registerForm').style.display = isReg ? 'block' : 'none';
+      document.getElementById('loginFormWrap').style.display = isReg ? 'none' : 'block';
+      document.getElementById('regTab').classList.toggle('active', isReg);
+      document.getElementById('loginTab').classList.toggle('active', !isReg);
+    }
+
+    // Check URL hash for direct login link
+    if (window.location.hash === '#login') switchTab('login');
+
+    // helper functions for errors
+    function showError(id, msg) {
+      const el = document.getElementById(id);
+      el.textContent = msg;
+      el.style.display = 'block';
+    }
+    function clearError(id) {
+      const el = document.getElementById(id);
+      if (el) { el.textContent = ''; el.style.display = 'none'; }
+    }
+    function clearAll(ids) { ids.forEach(clearError); }
+
+    // fake toast notification
+    function showToast(msg, success = true) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.className = 'toast ' + (success ? 'toast-success' : 'toast-error') + ' show';
+      setTimeout(() => t.className = 'toast', 3500);
+    }
+
+    function validateRegister(e) {
+      e.preventDefault();
+      const errs = ['err-fname', 'err-lname', 'err-email', 'err-phone', 'err-pass', 'err-confirm', 'err-terms'];
+      clearAll(errs);
+      let valid = true;
+
+      const fname = document.getElementById('reg-fname').value.trim();
+      const lname = document.getElementById('reg-lname').value.trim();
+      const email = document.getElementById('reg-email').value.trim();
+      const phone = document.getElementById('reg-phone').value.trim();
+      const pass = document.getElementById('reg-pass').value;
+      const conf = document.getElementById('reg-confirm').value;
+      const terms = document.getElementById('reg-terms').checked;
+
+      if (!fname) { showError('err-fname', '⚠ First name is required'); valid = false; }
+      else if (fname.length < 2) { showError('err-fname', '⚠ Must be at least 2 characters'); valid = false; }
+
+      if (!lname) { showError('err-lname', '⚠ Last name is required'); valid = false; }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email) { showError('err-email', '⚠ Email is required'); valid = false; }
+      else if (!emailRegex.test(email)) { showError('err-email', '⚠ Please enter a valid email'); valid = false; }
+
+      const phoneRegex = /^[+]?[\d\s-]{10,15}$/;
+      if (!phone) { showError('err-phone', '⚠ Phone number is required'); valid = false; }
+      else if (!phoneRegex.test(phone)) { showError('err-phone', '⚠ Please enter a valid phone number'); valid = false; }
+
+      if (!pass) { showError('err-pass', '⚠ Password is required'); valid = false; }
+      else if (pass.length < 8) { showError('err-pass', '⚠ Password must be at least 8 characters'); valid = false; }
+      else if (!/[A-Z]/.test(pass)) { showError('err-pass', '⚠ Must include at least one uppercase letter'); valid = false; }
+      else if (!/[0-9]/.test(pass)) { showError('err-pass', '⚠ Must include at least one number'); valid = false; }
+
+      if (!conf) { showError('err-confirm', '⚠ Please confirm your password'); valid = false; }
+      else if (pass !== conf) { showError('err-confirm', '⚠ Passwords do not match'); valid = false; }
+
+      if (!terms) { showError('err-terms', '⚠ You must accept the terms to continue'); valid = false; }
+
+      if (valid) {
+        showToast('🎉 Account created successfully! Welcome to EduNova!');
+        e.target.reset();
+        document.getElementById('strengthFill').style.width = '0';
+        document.getElementById('strengthLabel').textContent = '';
+      } else {
+        showToast('⚠ Please fix the errors below.', false);
+      }
+    }
+
+    function validateLogin(e) {
+      e.preventDefault();
+      clearAll(['lerr-email', 'lerr-pass']);
+      let valid = true;
+
+      const email = document.getElementById('login-email').value.trim();
+      const pass = document.getElementById('login-pass').value;
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email) { showError('lerr-email', '⚠ Email is required'); valid = false; }
+      else if (!emailRegex.test(email)) { showError('lerr-email', '⚠ Please enter a valid email'); valid = false; }
+
+      if (!pass) { showError('lerr-pass', '⚠ Password is required'); valid = false; }
+      else if (pass.length < 6) { showError('lerr-pass', '⚠ Password too short'); valid = false; }
+
+      if (valid) {
+        showToast('✅ Login successful! Redirecting to dashboard...');
+        setTimeout(() => { window.location.href = 'index.html'; }, 2000);
+      } else {
+        showToast('⚠ Please fix the errors below.', false);
+      }
+    }
+
+    function checkStrength() {
+      const pass = document.getElementById('reg-pass').value;
+      const fill = document.getElementById('strengthFill');
+      const label = document.getElementById('strengthLabel');
+      let strength = 0;
+      if (pass.length >= 8) strength++;
+      if (/[A-Z]/.test(pass)) strength++;
+      if (/[0-9]/.test(pass)) strength++;
+      if (/[^A-Za-z0-9]/.test(pass)) strength++;
+      const levels = [
+        { w: '0%', color: 'transparent', text: '' },
+        { w: '25%', color: '#e74c3c', text: 'Weak' },
+        { w: '50%', color: '#e67e22', text: 'Fair' },
+        { w: '75%', color: '#f39c12', text: 'Good' },
+        { w: '100%', color: '#27ae60', text: 'Strong' }
+      ];
+      const l = levels[strength];
+      fill.style.width = l.w;
+      fill.style.background = l.color;
+      label.textContent = l.text;
+      label.style.color = l.color;
+    }
+
+    function togglePass(id, btn) {
+      const input = document.getElementById(id);
+      if (input.type === 'password') { input.type = 'text'; btn.textContent = '🙈'; }
+      else { input.type = 'password'; btn.textContent = '👁'; }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- Jamie S. - CS301 Final Project -->
+<!-- PLEASE GIVE ME AN A -->
+<!-- (I know the design is basic, I ran out of time) -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduNova — My Web Dev Project</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">◈</span>
+      <span class="brand-name">EduNova</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="courses.html" class="nav-link">Courses</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="register.html" class="nav-btn">Get Started</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <!-- Hero stuff -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Welcome to<br />
+        <span class="gradient-text">EduNova</span><br />
+        (My Project)
+      </h1>
+      <p class="hero-subtitle">
+        This is my final project for web development. It's a fake course platform populated with placeholder data.
+        Please grade gently.
+      </p>
+      <div class="hero-actions">
+        <a href="courses.html" class="btn btn-primary">Explore Courses →</a>
+        <a href="register.html" class="btn btn-ghost">Test Login Page</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">1</span>
+          <span class="stat-label">Stressed Student</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">9</span>
+          <span class="stat-label">Mock Courses</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">A+</span>
+          <span class="stat-label">Hoped Grade</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="section categories-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Browse by Topic</span>
+        <h2 class="section-title">Popular <span class="gradient-text">Categories</span></h2>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card" onclick="location.href='courses.html'">
+          <div class="cat-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>48 courses</p>
+        </div>
+        <div class="category-card" onclick="location.href='courses.html'">
+          <div class="cat-icon">📊</div>
+          <h3>Data Science</h3>
+          <p>35 courses</p>
+        </div>
+        <div class="category-card" onclick="location.href='courses.html'">
+          <div class="cat-icon">🤖</div>
+          <h3>AI & Machine Learning</h3>
+          <p>27 courses</p>
+        </div>
+        <div class="category-card" onclick="location.href='courses.html'">
+          <div class="cat-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>22 courses</p>
+        </div>
+        <div class="category-card" onclick="location.href='courses.html'">
+          <div class="cat-icon">📱</div>
+          <h3>Mobile Development</h3>
+          <p>31 courses</p>
+        </div>
+        <div class="category-card" onclick="location.href='courses.html'">
+          <div class="cat-icon">🔐</div>
+          <h3>Cybersecurity</h3>
+          <p>18 courses</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED COURSES -->
+  <div class="section featured-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Handpicked for You</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Courses</span></h2>
+      </div>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="course-body">
+            <div class="course-category">Web Development</div>
+            <h3 class="course-title">fullstack web dev: how I survived my CS classes</h3>
+            <p class="course-instructor">👤 jamie s.</p>
+            <div class="course-meta">
+              <div class="stars">★★★★★ <span>4.9</span></div>
+              <span class="course-duration">42h</span>
+            </div>
+            <div class="course-footer">
+              <span class="price">₹499</span>
+              <a href="course-details.html" class="btn-small">View Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-body">
+            <div class="course-category">Data Science</div>
+            <h3 class="course-title">Python for Data Science & Analytics</h3>
+            <p class="course-instructor">👤 Prof. James Chen</p>
+            <div class="course-meta">
+              <div class="stars">★★★★★ <span>4.8</span></div>
+              <span class="course-duration">38h</span>
+            </div>
+            <div class="course-footer">
+              <span class="price">₹3,499</span>
+              <a href="course-details.html" class="btn-small">View Course</a>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-body">
+            <div class="course-category">AI & ML</div>
+            <h3 class="course-title">Machine Learning A-Z with TensorFlow</h3>
+            <p class="course-instructor">👤 Dr. Priya Sharma</p>
+            <div class="course-meta">
+              <div class="stars">★★★★☆ <span>4.7</span></div>
+              <span class="course-duration">55h</span>
+            </div>
+            <div class="course-footer">
+              <span class="price">₹4,999</span>
+              <a href="course-details.html" class="btn-small">View Course</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="courses.html" class="btn btn-primary">View All Courses →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY section -->
+  <div class="section why-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why EduNova</span>
+        <h2 class="section-title">Learning Reimagined for <span class="gradient-text">the Modern Era</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🎯</div>
+          <h3>Expert Instructors</h3>
+          <p>Learn from industry veterans with 10+ years of real-world experience in top global companies.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📜</div>
+          <h3>Certified Credentials</h3>
+          <p>Earn globally recognized certificates that boost your resume and LinkedIn profile instantly.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔄</div>
+          <h3>Lifetime Access</h3>
+          <p>Purchase once, access forever. Including all future course updates and new materials added.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💬</div>
+          <h3>Community Support</h3>
+          <p>Join 50,000+ learners in our active community forums with 24/7 mentor assistance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Peer Reviews</span>
+        <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Jamie hasn't slept in 2 days trying to center a div. The site works though!"</p>
+          <div class="t-author">
+            <div class="t-avatar">AL</div>
+            <div>
+              <div class="t-name">Alex M.</div>
+              <div class="t-role">Jamie's Roommate</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card featured-testimonial">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"Please give him an A, he promised to buy us pizza if he passes this class."</p>
+          <div class="t-author">
+            <div class="t-avatar">SM</div>
+            <div>
+              <div class="t-name">Sam K.</div>
+              <div class="t-role">Study Group Member</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">"I have no idea what this code does, but it looks like a real website on my iPad so that's
+            cool."</p>
+          <div class="t-author">
+            <div class="t-avatar">JM</div>
+            <div>
+              <div class="t-name">Mrs. Smith</div>
+              <div class="t-role">Jamie's Mom</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Ready to grade my project?</h2>
+      <p>Click below to test the database forms or look at the fake courses.</p>
+      <div class="cta-actions">
+        <a href="register.html" class="btn btn-white">Create Free Account</a>
+        <a href="courses.html" class="btn btn-outline-white">Browse Courses</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-brand" style="margin-bottom:1rem">
+            <span class="brand-icon">◈</span>
+            <span class="brand-name">EduNova</span>
+          </div>
+          <p>Just a student project built with sweat, tears, and lots of Stack Overflow.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="course-details.html">Course Details</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="register.html#login">Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>📧 hello@edunova.in</li>
+            <li>📞 +91 98765 43210</li>
+            <li>📍 Hyderabad, Telangana</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 EduNova. This website is a student academic project.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // simple toggle for the mobile menu
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>

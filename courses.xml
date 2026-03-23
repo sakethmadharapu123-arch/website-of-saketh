@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  XML database for my project. 
+  I typed this by hand so there might be some typos.
+-->
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="courses.xsd">
+
+  <metadata>
+    <platform>EduNova</platform>
+    <version>2.0</version>
+    <lastUpdated>2025-06-01</lastUpdated>
+    <totalCourses>9</totalCourses>
+  </metadata>
+
+  <courses>
+
+    <course id="C001">
+      <title>fullstack web dev: how I survived my CS classes</title>
+      <category>Web Development</category>
+      <instructor>
+        <name>jamie s.</name>
+        <title>cs student just trying to help</title>
+        <experience>3 years</experience>
+        <rating>4.9</rating>
+        <totalStudents>1200</totalStudents>
+      </instructor>
+      <price currency="INR">499</price>
+      <originalPrice currency="INR">1499</originalPrice>
+      <discount>66</discount>
+      <rating>4.9</rating>
+      <reviewCount>2347</reviewCount>
+      <enrolledStudents>8421</enrolledStudents>
+      <duration unit="hours">42</duration>
+      <lessonCount>185</lessonCount>
+      <level>Beginner to Advanced</level>
+      <badge>Bestseller</badge>
+      <certificate>true</certificate>
+      <lifetimeAccess>true</lifetimeAccess>
+      <description>literally just everything u need to know to not fail web dev. i made this bc my professor was terrible. html, css, js, react, node.</description>
+      <topics>
+        <topic>html/css basics</topic>
+        <topic>js (the crying part)</topic>
+        <topic>react frontend</topic>
+        <topic>node backend</topic>
+        <topic>mongodb</topic>
+        <topic>auth/jwt</topic>
+        <topic>git (commit &amp; push)</topic>
+        <topic>deploying ur site</topic>
+      </topics>
+    </course>
+
+    <course id="C002">
+      <title>Python for Data Science &amp; Analytics</title>
+      <category>Data Science</category>
+      <instructor>
+        <name>Prof. James Chen</name>
+        <title>Data Science Lead at Infosys</title>
+        <experience>10 years</experience>
+        <rating>4.8</rating>
+        <totalStudents>32000</totalStudents>
+      </instructor>
+      <price currency="INR">3499</price>
+      <originalPrice currency="INR">11999</originalPrice>
+      <discount>71</discount>
+      <rating>4.8</rating>
+      <reviewCount>3100</reviewCount>
+      <enrolledStudents>11200</enrolledStudents>
+      <duration unit="hours">38</duration>
+      <lessonCount>162</lessonCount>
+      <level>Beginner to Intermediate</level>
+      <badge>New</badge>
+      <certificate>true</certificate>
+      <lifetimeAccess>true</lifetimeAccess>
+      <description>Learn Python programming and apply it to real-world data analysis, visualization, and analytics tasks.</description>
+      <topics>
+        <topic>Python Fundamentals</topic>
+        <topic>NumPy and Pandas</topic>
+        <topic>Matplotlib and Seaborn</topic>
+        <topic>Statistical Analysis</topic>
+        <topic>Data Cleaning</topic>
+        <topic>Machine Learning Basics</topic>
+      </topics>
+    </course>
+
+    <course id="C003">
+      <title>Machine Learning A-Z with TensorFlow</title>
+      <category>AI &amp; Machine Learning</category>
+      <instructor>
+        <name>Dr. Priya Sharma</name>
+        <title>AI Research Scientist</title>
+        <experience>9 years</experience>
+        <rating>4.7</rating>
+        <totalStudents>28000</totalStudents>
+      </instructor>
+      <price currency="INR">4999</price>
+      <originalPrice currency="INR">14999</originalPrice>
+      <discount>67</discount>
+      <rating>4.7</rating>
+      <reviewCount>1500</reviewCount>
+      <enrolledStudents>6320</enrolledStudents>
+      <duration unit="hours">55</duration>
+      <lessonCount>210</lessonCount>
+      <level>Intermediate to Advanced</level>
+      <badge>Hot</badge>
+      <certificate>true</certificate>
+      <lifetimeAccess>true</lifetimeAccess>
+      <description>Comprehensive machine learning course covering supervised, unsupervised learning, and deep learning with TensorFlow.</description>
+      <topics>
+        <topic>Regression and Classification</topic>
+        <topic>Decision Trees and Random Forests</topic>
+        <topic>Support Vector Machines</topic>
+        <topic>Neural Networks</topic>
+        <topic>TensorFlow and Keras</topic>
+        <topic>Model Evaluation</topic>
+      </topics>
+    </course>
+
+    <course id="C004">
+      <title>UI/UX Design: Zero to Hero with Figma</title>
+      <category>UI/UX Design</category>
+      <instructor>
+        <name>Riya Kapoor</name>
+        <title>Senior UI/UX Designer at Adobe</title>
+        <experience>8 years</experience>
+        <rating>4.9</rating>
+        <totalStudents>21000</totalStudents>
+      </instructor>
+      <price currency="INR">2799</price>
+      <originalPrice currency="INR">8999</originalPrice>
+      <discount>69</discount>
+      <rating>4.9</rating>
+      <reviewCount>2000</reviewCount>
+      <enrolledStudents>7850</enrolledStudents>
+      <duration unit="hours">30</duration>
+      <lessonCount>140</lessonCount>
+      <level>Beginner to Advanced</level>
+      <badge></badge>
+      <certificate>true</certificate>
+      <lifetimeAccess>true</lifetimeAccess>
+      <description>Master UI/UX design from scratch using Figma. Learn design thinking, prototyping, and user research.</description>
+      <topics>
+        <topic>Design Principles</topic>
+        <topic>Figma Mastery</topic>
+        <topic>User Research</topic>
+        <topic>Wireframing</topic>
+        <topic>Prototyping</topic>
+        <topic>Design Systems</topic>
+      </topics>
+    </course>
+
+    <course id="C005">
+      <title>React.js — The Complete Guide 2025</title>
+      <category>Web Development</category>
+      <instructor>
+        <name>Alex Turner</name>
+        <title>Frontend Architect at Google</title>
+        <experience>11 years</experience>
+        <rating>4.8</rating>
+        <totalStudents>39000</totalStudents>
+      </instructor>
+      <price currency="INR">3299</price>
+      <originalPrice currency="INR">10999</originalPrice>
+      <discount>70</discount>
+      <rating>4.8</rating>
+      <reviewCount>1800</reviewCount>
+      <enrolledStudents>9400</enrolledStudents>
+      <duration unit="hours">36</duration>
+      <lessonCount>155</lessonCount>
+      <level>Intermediate</level>
+      <badge>New</badge>
+      <certificate>true</certificate>
+      <lifetimeAccess>true</lifetimeAccess>
+      <description>Master modern React.js including hooks, context, Redux Toolkit, and Next.js for full-stack development.</description>
+      <topics>
+        <topic>React Fundamentals</topic>
+        <topic>React Hooks</topic>
+        <topic>Context API</topic>
+        <topic>Redux Toolkit</topic>
+        <topic>Next.js</topic>
+        <topic>Testing in React</topic>
+      </topics>
+    </course>
+
+    <course id="C006">
+      <title>Deep Learning &amp; Neural Networks</title>
+      <category>AI &amp; Machine Learning</category>
+      <instructor>
+        <name>Dr. Arjun Mehta</name>
+        <title>ML Engineer at Microsoft Research</title>
+        <experience>13 years</experience>
+        <rating>4.9</rating>
+        <totalStudents>17000</totalStudents>
+      </instructor>
+      <price currency="INR">5499</price>
+      <originalPrice currency="INR">16999</originalPrice>
+      <discount>68</discount>
+      <rating>4.9</rating>
+      <reviewCount>890</reviewCount>
+      <enrolledStudents>4200</enrolledStudents>
+      <duration unit="hours">48</duration>
+      <lessonCount>195</lessonCount>
+      <level>Advanced</level>
+      <badge></badge>
+      <certificate>true</certificate>
+      <lifetimeAccess>true</lifetimeAccess>
+      <description>Advanced deep learning course covering CNNs, RNNs, Transformers, and cutting-edge architectures.</description>
+      <topics>
+        <topic>Neural Network Fundamentals</topic>
+        <topic>Convolutional Neural Networks</topic>
+        <topic>Recurrent Neural Networks</topic>
+        <topic>Transformers and BERT</topic>
+        <topic>GANs</topic>
+        <topic>Computer Vision</topic>
+      </topics>
+    </course>
+
+    <course id="C007">
+      <title>SQL &amp; Database Design Masterclass</title>
+      <category>Data Science</category>
+      <instructor>
+        <name>Neha Joshi</name>
+        <title>Database Architect at Oracle</title>
+        <experience>14 years</experience>
+        <rating>4.9</rating>
+        <totalStudents>25000</totalStudents>
+      </instructor>
+      <price currency="INR">1999</price>
+      <originalPrice currency="INR">6999</originalPrice>
+      <discount>71</discount>
+      <rating>4.9</rating>
+      <reviewCount>2400</reviewCount>
+      <enrolledStudents>10500</enrolledStudents>
+      <duration unit="hours">22</duration>
+      <lessonCount>98</lessonCount>
+      <level>Beginner to Intermediate</level>
+      <badge></badge>
+      <certificate>true</certificate>
+      <lifetimeAccess>true</lifetimeAccess>
+      <description>Complete SQL and relational database design course covering everything from basics to advanced query optimization.</description>
+      <topics>
+        <topic>SQL Fundamentals</topic>
+        <topic>Database Design</topic>
+        <topic>Advanced Queries</topic>
+        <topic>Stored Procedures</topic>
+        <topic>Indexing and Performance</topic>
+        <topic>PostgreSQL</topic>
+      </topics>
+    </course>
+
+    <course id="C008">
+      <title>Node.js &amp; Express — Backend Mastery</title>
+      <category>Web Development</category>
+      <instructor>
+        <name>Chris Evans</name>
+        <title>Senior Backend Engineer at Stripe</title>
+        <experience>9 years</experience>
+        <rating>4.6</rating>
+        <totalStudents>18500</totalStudents>
+      </instructor>
+      <price currency="INR">2499</price>
+      <originalPrice currency="INR">8499</originalPrice>
+      <discount>71</discount>
+      <rating>4.6</rating>
+      <reviewCount>987</reviewCount>
+      <enrolledStudents>5600</enrolledStudents>
+      <duration unit="hours">28</duration>
+      <lessonCount>118</lessonCount>
+      <level>Intermediate</level>
+      <badge></badge>
+      <certificate>true</certificate>
+      <lifetimeAccess>true</lifetimeAccess>
+      <description>Build scalable backend services with Node.js and Express. Learn REST APIs, authentication, and cloud deployment.</description>
+      <topics>
+        <topic>Node.js Core</topic>
+        <topic>Express.js</topic>
+        <topic>REST API Design</topic>
+        <topic>Authentication and JWT</topic>
+        <topic>File Uploads</topic>
+        <topic>Testing with Jest</topic>
+      </topics>
+    </course>
+
+    <course id="C009">
+      <title>Flutter &amp; Dart — Build iOS &amp; Android Apps</title>
+      <category>Mobile Development</category>
+      <instructor>
+        <name>Kiran Rao</name>
+        <title>Mobile Lead at Paytm</title>
+        <experience>7 years</experience>
+        <rating>4.6</rating>
+        <totalStudents>14000</totalStudents>
+      </instructor>
+      <price currency="INR">3799</price>
+      <originalPrice currency="INR">12499</originalPrice>
+      <discount>70</discount>
+      <rating>4.6</rating>
+      <reviewCount>1200</reviewCount>
+      <enrolledStudents>5100</enrolledStudents>
+      <duration unit="hours">40</duration>
+      <lessonCount>168</lessonCount>
+      <level>Beginner to Intermediate</level>
+      <badge></badge>
+      <certificate>true</certificate>
+      <lifetimeAccess>true</lifetimeAccess>
+      <description>Build beautiful, natively compiled iOS and Android apps from a single codebase using Flutter and Dart.</description>
+      <topics>
+        <topic>Dart Programming</topic>
+        <topic>Flutter Widgets</topic>
+        <topic>State Management</topic>
+        <topic>Firebase Integration</topic>
+        <topic>App Store Deployment</topic>
+        <topic>Push Notifications</topic>
+      </topics>
+    </course>
+
+  </courses>
+
+</catalog>
